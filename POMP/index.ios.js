@@ -130,7 +130,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     }
-
 });
 
 AppRegistry.registerComponent('POMP', () => POMP);
