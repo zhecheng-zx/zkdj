@@ -70,9 +70,10 @@ class IndexView extends Component{
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        justifyContent: 'center',
+        //justifyContent: 'center',
+        paddingTop:50,
         alignItems: 'center',
-        backgroundColor: '#3dabec',
+        backgroundColor: '#3dabec'
     },
     logo:{
         flexDirection:'row',

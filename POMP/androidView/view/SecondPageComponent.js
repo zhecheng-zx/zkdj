@@ -6,6 +6,7 @@ import {
     View,
     Navigator,
     Text,
+    StyleSheet,
     TouchableOpacity
 } from 'react-native';
 
@@ -40,12 +41,27 @@ export default class SecondPageComponent extends React.Component{
     }
     render(){
         return(
-            <View>
-                <Text>获得参数：id={this.state.id}</Text>
+            <View style={styles.container}>
+                <Text style={styles.textA}>获得参数：id={this.state.id}</Text>
                 <TouchableOpacity onPress={this._pressButton.bind(this)}>
-                    <Text>点击跳回</Text>
+                    <Text style={styles.textA}>点击跳回</Text>
                 </TouchableOpacity>
             </View>
         );
     }
 }
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        paddingTop:30,
+        //justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#3dabec'
+    },
+    textA:{
+        flexDirection:'row',
+        width:200,
+        height:30,
+        color:'blue'
+    }
+});

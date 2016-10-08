@@ -40,15 +40,17 @@ export default class FirstPageComponent extends React.Component{
     render(){
         if(this.state.user){
             return(
-                <View className={styles.container}>
-                    <Text className={style.text}>用户信息：{JSON.stringify(this.state.user)}</Text>
+                <View style={styles.container}>
+                    <Text style={style.text}>用户信息：{JSON.stringify(this.state.user)}</Text>
                 </View>
             );
         }else{
             return(
-                <View className={styles.container}>
+                <View style={styles.container}>
                     <TouchableOpacity onPress={this._pressButton.bind(this)}>
-                        <Text className={styles.text}>查询ID为{this.state.id}的用户信息</Text>
+                        <View>
+                            <Text style={styles.textA}>查询ID为{this.state.id}的用户信息</Text>
+                        </View>
                     </TouchableOpacity>
                 </View>
             );
@@ -58,13 +60,15 @@ export default class FirstPageComponent extends React.Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop:30,
-        justifyContent: 'center',
+        paddingTop:30,
+        //justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#3dabec',
+        backgroundColor: '#3dabec'
     },
-    text:{
-        marginTop:20,
+    textA:{
+        flexDirection:'row',
+        width:200,
+        height:30,
         color:'blue'
     }
 });
