@@ -5,14 +5,15 @@ import {
     View,
     Text,
     Image,
-    StyleSheet,
+    StyleSheet
 } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 import MeView from './MeView';
 import MonitorView from './MonitorView';
 import SpecialView from './SpecialView';
 import StewardView from './StewardView';
-export default class Sec extends React.Component{
+
+export default class TabBarView extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -43,6 +44,14 @@ export default class Sec extends React.Component{
  allowFontScaling: PropTypes.bool,    是否允许字体自动缩放
 * tabbar 属性 */
     render(){
+        const rightButtonConfig = {
+            title: 'Next',
+            handler: () => alert('hello!'),
+        };
+
+        const titleConfig = {
+            title: 'Hello, world',
+        };
         return(
             <TabNavigator>
                 <TabNavigator.Item
@@ -98,6 +107,6 @@ const styles = StyleSheet.create({
         color:'#999',
     },
     selectedTextStyle:{
-        color:'blue',
+        color:'rgb(61,171,236)',
     }
 });

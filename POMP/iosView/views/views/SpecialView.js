@@ -3,11 +3,23 @@
  */
 import React from 'react';
 import {View,Text} from 'react-native';
-export default class ThView extends React.Component {
+import NavigationBar from 'react-native-navbar';
+export default class StewardView extends React.Component {
     render (){
-        return(
-            <View>
-                <Text>我是第二页</Text>
+        const rightButtonConfig = {
+            title: '功能',
+            handler: () => alert('点击效果'),
+        };
+        const titleConfig = {
+            title: '专项舆情',
+        };
+        return (
+            <View style={{ flex: 1, }}>
+                <NavigationBar
+                    title={titleConfig}
+                    rightButton={rightButtonConfig}
+                    tintColor={'rgb(61,171,236)'}/>
+                <Text>第二页</Text>
             </View>
         );
     }
