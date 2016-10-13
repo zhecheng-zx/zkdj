@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import TouchableButton from '../../iosView/views/util/button';
 import FirstPageComponent from './FirstPageComponent';
-class IndexView extends Component{
+export default class IndexView extends Component{
     render() {
         return (
             <View style={styles.container}>
@@ -57,7 +57,7 @@ class IndexView extends Component{
     }
     _home(){
         //Alert.alert("提示","你点击了登录按钮！");
-        let _this=this
+        let _this=this;
         const {navigator}=this.props;
         if(navigator){
             navigator.push({
@@ -140,4 +140,3 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     }
 });
-module.exports=IndexView;
