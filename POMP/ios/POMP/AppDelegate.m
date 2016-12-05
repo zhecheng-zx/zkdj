@@ -8,10 +8,10 @@
  */
 
 #import "AppDelegate.h"
-
 #import "RCTBundleURLProvider.h"
 #import "RCTRootView.h"
-
+//#import "RCTViewManager.h"
+//#import "POMP-Bridging-Header.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -19,7 +19,7 @@
   NSURL *jsCodeLocation;
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
-
+  
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"POMP"
                                                initialProperties:nil

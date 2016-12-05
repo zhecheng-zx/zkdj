@@ -13,18 +13,19 @@ import {
     Image
 } from 'react-native';
 import TouchableButton from '../util/button';
-import TabNagivator from '../views/TabBarView'
+import TabNagivator from '../views/TabBarView';
+// import RootView from '../RootVC';
 export default class Home extends Component{
     render() {
         return (
             <View style={styles.container}>
-                <Image source={require('../../../images/login/logo.png')} style={styles.logo}></Image>
+                <Image source={require('../../../images/login/logo.png')} style={styles.logo}/>
                 <View style={styles.border}>
-                    <Image source={require('../../../images/login/userIcon.png')} style={styles.username}></Image>
+                    <Image source={require('../../../images/login/userIcon.png')} style={styles.username}/>
                     <TextInput placeholder='用户名' name='userName' placeholderTextColor='#999999' style={styles.inputText} onChangeText={this._getUserName}></TextInput>
                 </View>
                 <View style={styles.border}>
-                    <Image source={require('../../../images/login/pwdIcon.png')} style={styles.password}></Image>
+                    <Image source={require('../../../images/login/pwdIcon.png')} style={styles.password}/>
                     <TextInput placeholder='密码' name="passWord" defaultValue="" secureTextEntry={true} placeholderTextColor='#999999' style={styles.inputText} onChangeText={this._getPassword}></TextInput>
                 </View>
                 <View>
@@ -32,7 +33,7 @@ export default class Home extends Component{
                         underlayColor='#4169e1'
                         style={styles.style_view_button}
                         onPress={this._home.bind(this)}
-                        text='登录有点击效果'>
+                        text='登录吧皮卡丘'>
                     </TouchableButton>
                 </View>
             </View>

@@ -44,14 +44,13 @@ export default class TabBarView extends React.Component{
  allowFontScaling: PropTypes.bool,    是否允许字体自动缩放
 * tabbar 属性 */
     render(){
-        const rightButtonConfig = {
-            title: 'Next',
-            handler: () => alert('hello!'),
-        };
-
-        const titleConfig = {
-            title: 'Hello, world',
-        };
+        // const rightButtonConfig = {
+        //     title: 'Next',
+        //     handler: () => alert('hello!'),
+        // };
+        // const titleConfig = {
+        //     title: 'Hello, world',
+        // };
         return(
             <TabNavigator>
                 <TabNavigator.Item
